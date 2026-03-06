@@ -89,7 +89,7 @@ printf("PIB da cidade 1 R$:%.2f\n",pib);
 printf("Pontos turisticos da cidade 1:%d\n",pontos_turisticos);
 
 
-printf("Densidade populacional da cidade 1:%.2f hab/km²\n",densidade_populacional);
+printf("Densidade populacional da cidade 1:%.2f hab/km\n",densidade_populacional);
 printf("PIB per capita da cidade 1:R$%.2f\n",pib_capita);
   // cidade 2
 printf("----- CIDADE 2 -----\n");
@@ -101,18 +101,18 @@ printf("Area da cidade 2:%.2f\n",area2);
 printf("PIB da cidade 2 R$:%.2f\n",pib2);
 printf("Pontos turisticos da cidade 2:%d\n",pontos_turisticos2);
 
-printf("Densidade populacional da cidade 2:%.2f hab/km²\n",densidade_populacional2);
+printf("Densidade populacional da cidade 2:%.2f hab/km\n",densidade_populacional2);
 printf("PIB per capita da cidade 2:R$%.2f\n",pib_capita2);
 
   // Comparação de cartas
-
-printf("população:%d\n",populacao>populacao2);
-printf("area:%d\n",area>area2);
-printf("Pib:%d\n",pib>pib2);
-printf("Pontos turisticos:%d\n",pontos_turisticos>pontos_turisticos2);
-printf("Pib per capita:%d\n",pib_capita>pib_capita2);
-printf("Densidade populacional:%d\n",densidade_populacional<densidade_populacional2);
-printf("Super Poder:%d\n",super_poder>super_poder2);
-
+printf("Comparar PIB Per Capita\n");
+printf("Carta 1-%s R$:%.2f\n",nome,pib_capita);
+printf("Carta 2-%s R$:%.2f\n",nome2,pib_capita2);
+if (pib_capita == pib_capita2)
+  printf("Empate!\n");
+else if (pib_capita>pib_capita2)
+  printf("A carta 1 (%s) Ganhou! com diferença de R$:%.2f",nome,pib_capita-pib_capita2);
+else
+  printf("A carta 2 (%s) Ganhou! com diferença de R$:%.2f",nome2,pib_capita2-pib_capita);
 return 0;
 } 
